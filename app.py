@@ -46,8 +46,8 @@ def UniH(name,a,b,meter):
                     bam = float(b)
                     am = float(a)
                     return str(math.pow(am,bam))
-                case "sqrt":
-                    if a < 0:
+                case "root":
+                    if float(a) < 0:
                         return "You can't get a square root out of negative number!"
                     else:
                         return str(math.sqrt(float(a)))
@@ -69,8 +69,8 @@ def UniH(name,a,b,meter):
                     bam = float(b)
                     am = float(a)
                     return str(math.pow(am,bam))
-                case "sqrt":
-                    if a < 0:
+                case "root":
+                    if float(a) < 0:
                         return "You can't get a square root out of negative number!"
                     else:
                         return str(math.sqrt(float(a)))
