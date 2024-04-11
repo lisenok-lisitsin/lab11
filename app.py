@@ -5,6 +5,10 @@ from flask import Flask
 
 app = Flask(__name__)
 
+@app.route('/')
+def HelloWorld():
+    return "/simath/ a / n - (+,-,*,|,||,mod) / b<br>/hamath/ name - (cos, sin, tan, pow, sqrt) / a / b / meter - (degrees, rads)"
+
 @app.route('/simath/<a>/<n>/<b>')
 def UniS(a,n,b):
     try:
