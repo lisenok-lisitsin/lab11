@@ -38,7 +38,7 @@ def UniH(name,a,b,meter):
                 case "sin":
                     return str(math.sin(math.radians(float(a))))
                 case "tan":
-                    if float(a) % (math.pi / 2):
+                    if ((float(a) % (math.pi / 2)) == 0):
                         return "Unaccaptable number"
                     else:
                         return str(math.tan(math.radians(float(a))))
@@ -61,9 +61,10 @@ def UniH(name,a,b,meter):
                     return str(math.sin(af))
                 case "tan":
                     af = float(a)
-                    if af % (math.pi / 2):
+                    if ((af % (math.pi / 2)) == 0):
                         return "Unaccaptable number"
-                    return str(math.tan(af))
+                    else:
+                        return str(math.tan(af))
                 case "pow":
                     bam = float(b)
                     am = float(a)
