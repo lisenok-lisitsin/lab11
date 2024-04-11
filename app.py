@@ -7,19 +7,22 @@ app = Flask(__name__)
 
 @app.route('/simath/<a>/<n>/<b>')
 def UniS(a,n,b):
-    match n:
-        case "+":
-            return str(float(a)+float(b))
-        case "-":
-            return str(float(a)-float(b))
-        case "*":
-            return str(float(a)*float(b))
-        case "|":
-            return str(float(a)/float(b))
-        case "||":
-            return str(float(a)//float(b))
-        case "mod":
-            return str(float(a)%float(b))
+    try:
+        match n:
+            case "+":
+                return str(float(a)+float(b))
+            case "-":
+                return str(float(a)-float(b))
+            case "*":
+                return str(float(a)*float(b))
+            case "|":
+                return str(float(a)/float(b))
+            case "||":
+                return str(float(a)//float(b))
+            case "mod":
+                return str(float(a)%float(b))
+    except Exception as e:
+        return "You've typed a wrong number, or letter! Try again"
 
 @app.route('/hamath/<name>/<a>/<b>/<meter>')
 def UniH(name,a,b,meter):
